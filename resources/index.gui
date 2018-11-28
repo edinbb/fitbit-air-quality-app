@@ -1,0 +1,173 @@
+<svg>
+  <defs>
+    <symbol id='background-item'>
+        <image />
+    </symbol>
+    <!-- Details Screen -->
+    <symbol id='details-title' href='#scrollview-item' height='58'>
+      <text id='name-text' class='medium name-details' />
+      <text class='small note'>Monitoring Station</text>
+      <rect class='divider-bottom' />
+    </symbol>
+
+    <symbol id='details-iaqi' href='#scrollview-item' class='details-iaqi'>
+      <svg x='0' class='iaqi-section'>
+        <text x='6' y='85%' text-anchor='start' class='medium' />
+        <text x='95%' y='85%' text-anchor='end' class='medium' />
+      </svg>
+      <svg x='50%' class='iaqi-section'>
+        <text x='5%' y='85%' text-anchor='start' class='medium' />
+        <text x='100%-6' y='85%' text-anchor='end' class='medium' />
+      </svg>
+    </symbol>
+
+    <symbol id='details-extras' href='#scrollview-item' height='80'>
+      <text id='refresh-time-text' y='22' class='small extras-details'>Updated -- ago</text>
+      <text id='attribution-text' y='$' class='small extras-details'>Data Source: --</text>
+      <text id='sample-time-text' y='$' class='small extras-details'>Sampled on --</text>
+      <rect class='divider-bottom' />
+    </symbol>
+
+    <symbol id='details-buttons' href='#scrollview-item' class='buttons-action-item' height='74'>
+      <use id='button-history' href='#square-button' class='dialog-half-button-left' fill='fb-mint'>
+        <set href='#text' attributeName='text-length' to='32' />
+        <set href='#text' attributeName='text-buffer' to='History' />
+        <set href='#text' attributeName='text-anchor' to='middle' />
+      </use>
+      <use id='button-close' href='#square-button' class='dialog-half-button-right' fill='fb-magenta'>
+        <set href='#text' attributeName='text-length' to='32' />
+        <set href='#text' attributeName='text-buffer' to='Close' />
+        <set href='#text' attributeName='text-anchor' to='middle' />
+      </use>
+    </symbol>
+
+    <symbol id='details-screen' display='none' opacity='0'>
+      <rect class='background' />
+      <use id='container' href='#scrollview' overflow='hidden'>
+        <use href='#details-title' />
+        <use href='#scrollview-item' class='details-space' />
+        <use href='#details-iaqi' />
+        <use href='#details-iaqi' />
+        <use href='#details-iaqi' />
+        <use href='#scrollview-item' class='details-space' />
+        <use href='#details-extras' />
+        <use href='#details-buttons' />
+        <use href='#scrollview-item' height='4' />
+      </use>
+      <animate attributeName='display' to='inline' dur='0' begin='enable' />
+      <animate attributeName='display' to='none' dur='0' begin='disable+0.433' />
+      <animate attributeName='opacity' to='1' dur='0.4' begin='enable+0.033' easing='ease-in-out' />
+      <animate attributeName='opacity' to='0' dur='0.4' begin='disable' easing='ease-in-out' />
+    </symbol>
+    <!-- History Screen -->
+    <symbol id='history-header' href='#tile-list-item' height='58' display='none'>
+      <text id='text' class='medium name-details' />
+      <text class='small note'>Historical Data</text>
+      <rect id='tile-divider-bottom' class='divider-bottom' />
+    </symbol>
+
+    <symbol id='empty-message' href='#tile-list-item' class='empty-message-height' display='none'>
+      <textarea id='text' class='empty-message' />
+      <rect id='tile-divider-bottom' class='divider-bottom' />
+    </symbol>
+
+    <symbol id='history-button' href='#tile-list-item' height='80' display='none'>
+      <use id='button' href='#square-button' class='dialog-single-btn' y='100%-78' fill='fb-white'>
+        <set href='#text' attributeName='text-buffer' to='Back' />
+        <set href='#text' attributeName='text-anchor' to='middle' />
+      </use>
+    </symbol>
+
+    <symbol id='history-iaqi-chart-bar' class='history-iaqi-chart-bar' display='none'>
+      <text id='bar-value' class='history-iaqi-bar-value' />
+      <rect class='history-iaqi-bar-back' />
+      <rect id='bar-front' class='history-iaqi-bar-front' />
+      <text id='axis-value' class='history-iaqi-bar-day' />
+    </symbol>
+    
+    <symbol id='history-iaqi' href='#tile-list-item' class='history-iaqi-height' display='none'>
+      <text id='history-iaqi-pol' class='medium history-iaqi-pol' />
+      <svg id='history-bar-chart' class='history-bar-chart'>
+        <rect class='bar-chart-axis' />
+        <use href='#history-iaqi-chart-bar' x='0' />
+        <use href='#history-iaqi-chart-bar' x='$+4' />
+        <use href='#history-iaqi-chart-bar' x='$+4' />
+        <use href='#history-iaqi-chart-bar' x='$+4' />
+        <use href='#history-iaqi-chart-bar' x='$+4' />
+      </svg>
+      <rect id='tile-divider-bottom' class='divider-bottom' />
+    </symbol>
+
+    <symbol id='history-screen' display='none' opacity='0'>
+      <rect class='background' />
+      <use id='history-list' href='#tile-list'>
+        <var id='virtual' value='1' />
+        <var id='separator-height-bottom' value='2' />
+
+        <use id='history-header-pool' href='#tile-list-pool'>
+          <use id='history-header-pool[1]' href='#history-header' />
+        </use>
+         
+        <use id='empty-message-pool' href='#tile-list-pool'>
+          <use id='empty-message-pool[1]' href='#empty-message' />
+        </use>
+
+        <use id='history-button-pool' href='#tile-list-pool'>
+          <use id='history-button-pool[1]' href='#history-button' />
+        </use>
+
+        <use id='history-iaqi-pool' href='#tile-list-pool'>
+          <use id='history-iaqi-pool[1]' href='#history-iaqi' />
+          <use id='history-iaqi-pool[2]' href='#history-iaqi' />
+          <use id='history-iaqi-pool[3]' href='#history-iaqi' />
+          <use id='history-iaqi-pool[4]' href='#history-iaqi' />
+          <use id='history-iaqi-pool[5]' href='#history-iaqi' />
+          <use id='history-iaqi-pool[6]' href='#history-iaqi' />
+        </use>
+      </use>
+      <animate attributeName='display' to='inline' dur='0' begin='enable' />
+      <animate attributeName='display' to='none' dur='0' begin='disable+0.433' />
+      <animate attributeName='opacity' to='1' dur='0.4' begin='enable+0.033' easing='ease-in-out' />
+      <animate attributeName='opacity' to='0' dur='0.4' begin='disable' easing='ease-in-out' />
+    </symbol>
+    <!-- Main Screen -->
+    <symbol  id='station-item' href='#panoramaview-item' class='station-item'>
+      <text id='status-text' class='medium status'>--</text>
+      <text class='small note'>Air Quality</text>
+      <text id='distance-text' class='small distance' display='none' />
+      <svg class='body-container'>
+        <arc id='arc-back' class='body-arc body-arc-back' />
+        <arc id='arc-front' class='body-arc body-arc-front' />
+        <image id='cloud-icon' href='cloud.png' class='cloud-icon' />
+        <text id='aqi-text' class='large aqi' />
+        <text id='pol-text' class='small pol' />
+      </svg>
+      <text id='name-text' class='medium name'>Failed to load data</text>
+      <rect id='touch-area' pointer-events='all' />
+      <animate attributeName='display' to='inline' dur='0' begin='enable' />
+      <animate attributeName='display' to='none' dur='0' begin='disable+0.433' />
+      <animate attributeName='opacity' to='1' dur='0.4' begin='enable+0.033' easing='ease-in-out' />
+      <animate attributeName='opacity' to='0' dur='0.4' begin='disable' easing='ease-in-out' />
+    </symbol>
+
+  </defs>
+  <use id='background' href='#background-item' />
+
+  <use id='panorama' href='#panoramaview'>
+    <use href='#station-item' />
+    <use href='#station-item' />
+    <use href='#station-item' />
+    <use href='#station-item' />
+    <use id='pagination' href='#pagination-widget' y='100%-12'>
+      <use href='#pagination-dot' />
+      <use href='#pagination-dot' />
+      <use href='#pagination-dot' />
+      <use href='#pagination-dot' />
+      <use href='#pagination-highlight-dot' />
+    </use>
+  </use>
+  
+  <use id='details' href='#details-screen' />
+  <use id='history' href='#history-screen' />
+  <use id='error' href='#error-screen' />
+</svg>

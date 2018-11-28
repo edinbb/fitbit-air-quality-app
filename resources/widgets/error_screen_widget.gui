@@ -1,0 +1,15 @@
+<svg>
+  <defs>
+    <symbol  id='error-screen' display='none' opacity='0'>
+      <rect x='0' y='0' width='100%' height='100%' fill='fb-black' />
+      <use href='#mixed-text-center-mid' height='100%' fill='fb-blue'>
+        <set href='#header/text' attributeName='text-buffer' to='Air Quality'/>
+        <set href='#copy/text' attributeName='text-length' to='128' />
+      </use>
+      <animate attributeName='display' to='inline' dur='0' begin='enable' />
+      <animate attributeName='display' to='none' dur='0' begin='disable+0.433' />
+      <animate attributeName='opacity' to='1' dur='0.4' begin='enable+0.033' easing='ease-in-out' />
+      <animate attributeName='opacity' to='0' dur='0.4' begin='disable' easing='ease-in-out' />
+    </symbol>
+  </defs>
+</svg>
