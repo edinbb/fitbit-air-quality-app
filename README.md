@@ -18,9 +18,35 @@ Get the app here https://gam.fitbit.com/gallery/app/b66657c1-f6d2-4397-af8c-5099
 
 ## Installation
 
+Get [AQICN](http://aqicn.org/data-platform/token/#/) token
+
 git clone https://github.com/Ed2Bs/fitbit-air-quality-app.git
 
 cd fitbit-air-quality-app
+
+Add file resources/appconfig.json with following content: 
+
+```
+{
+  "app": {
+    "name": "AirQuality",
+    "version": "3.7.6"
+  },
+  "trackingId": "Your Google Analytics tracking ID",
+  "token": "Your AQICN token",
+  "wakeInterval": {
+    "values": [
+      {
+        "name": "Hourly",
+        "value": 3600000
+      }
+    ],
+    "selected": [
+      0
+    ]
+  }
+}
+```
 
 npm install
 
