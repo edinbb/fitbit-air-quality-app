@@ -2,6 +2,15 @@
 
 See air quality reports from 10k monitoring stations around the world. Reports are in the form of calculated AQI (Air Quality Index) for major air pollutants. The higher the AQI value, the greater the level of air pollution and the greater the health concern. Air pollutant with the highest AQI is shown on the main screen for the selected monitoring station. Tap the screen to see complete AQI list. Scroll down to access historical data.
 
+Features: 
+- add up to 3 monitoring stations
+- see data from the nearby station
+- see distance to the nearby station
+- air sampling time and date (station local time)
+- use photo from your mobile device as background
+- track historical data (max AQI values for the last 5 days)
+- customize fetch schedule
+
 ![](Screenshot-1.png)
 ![](Screenshot-2.png)
 
