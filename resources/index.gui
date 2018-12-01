@@ -6,7 +6,7 @@
     <!-- Details Screen -->
     <symbol id='details-title' href='#scrollview-item' height='58'>
       <text id='name-text' class='medium name-details' />
-      <text class='small note'>Monitoring Station</text>
+      <text id='title-text' class='small note'>Monitoring Station</text>
       <rect class='divider-bottom' />
     </symbol>
 
@@ -62,7 +62,7 @@
     <!-- History Screen -->
     <symbol id='history-header' href='#tile-list-item' height='58' display='none'>
       <text id='text' class='medium name-details' />
-      <text class='small note'>Historical Data</text>
+      <text id='title' class='small note'>Historical Data</text>
       <rect id='tile-divider-bottom' class='divider-bottom' />
     </symbol>
 
@@ -133,7 +133,7 @@
     <!-- Main Screen -->
     <symbol  id='station-item' href='#panoramaview-item' class='station-item'>
       <text id='status-text' class='medium status'>--</text>
-      <text class='small note'>Air Quality</text>
+      <text id='title-text' class='small note'>Air Quality</text>
       <text id='distance-text' class='small distance' display='none' />
       <svg class='body-container'>
         <arc id='arc-back' class='body-arc body-arc-back' />
@@ -142,7 +142,7 @@
         <text id='aqi-text' class='large aqi' />
         <text id='pol-text' class='small pol' />
       </svg>
-      <text id='name-text' class='medium name'>Failed to load data</text>
+      <text id='name-text' class='medium name' />
       <rect id='touch-area' pointer-events='all' />
       <animate attributeName='display' to='inline' dur='0' begin='enable' />
       <animate attributeName='display' to='none' dur='0' begin='disable+0.433' />

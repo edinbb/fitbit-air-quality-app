@@ -1,5 +1,6 @@
-import { LEVELS, POL_INT } from "./locales/en";
 import { barAttr } from "./utils";
+import { _ } from "./modules/i18n"
+import { LEVELS } from "../common/const";
 
 export class HistoryScreen {
   constructor(el) {
@@ -11,14 +12,15 @@ export class HistoryScreen {
   load(data) {
     let listArr = [{
       type: "history-header-pool",
-      value: data.name
+      value: data.name,
+      title: _("hist_data")
     }];
     if (!data.history
       || !data.history.iaqis
       || data.history.iaqis.length === 0) {
       listArr.push({
         type: "empty-message-pool",
-        value: "Nothing to show. Go to App Settings and set Track historical data to ON."
+        value: _("empty_message")
       });
     } else {
       data.history.iaqis.forEach(iaqi => {
@@ -37,16 +39,21 @@ export class HistoryScreen {
         return listArr[index];
       },
       configureTile: function (tile, info) {
-        if (info.type === "history-header-pool" || info.type === "empty-message-pool")
+        if (info.type === "empty-message-pool")
           tile.getElementById('text').text = info.value;
+        if (info.type === "history-header-pool") {
+          tile.getElementById('text').text = info.value;
+          tile.getElementById('title').text = info.title;
+        }
         if (info.type === "history-button-pool") {
           let btnEl = tile.getElementById('button');
+          btnEl.getElementById("text").text = _("back");
           btnEl.onclick = (evt) => info.self.onback();
         }
         if (info.type === "history-iaqi-pool") {
           let polEl = tile.getElementById("history-iaqi-pol");
           let barsEl = tile.getElementsByClassName("history-iaqi-chart-bar");
-          polEl.text = POL_INT[info.iaqi.pol] || "";
+          polEl.text = _(info.iaqi.pol);
           barsEl.forEach((el, i) => {
             el.style.display = "none";
             let histData = info.iaqi.iaqiHist[i];

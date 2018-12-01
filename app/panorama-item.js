@@ -1,7 +1,8 @@
 import { DetailsScreen } from "./details-screen"
 import { HistoryScreen } from "./history-screen"
-import { LEVELS, POL_INT } from "./locales/en";
 import { ease, formatDistance } from "./utils";
+import { _ } from "./modules/i18n"
+import { LEVELS } from "../common/const";
 
 export class PanoramaItem {
   constructor(el, dEl, hEl, timestamp, data) {
@@ -12,6 +13,7 @@ export class PanoramaItem {
     this.data = data;
     this.el.style.display = "inline";
     this.status = this.el.getElementById("status-text");
+    this.title = this.el.getElementById("title-text");
     this.distance = this.el.getElementById("distance-text");
     this.arcBack = this.el.getElementById("arc-back");
     this.cloudIcon = this.el.getElementById("cloud-icon");
@@ -31,15 +33,15 @@ export class PanoramaItem {
   }
 
   load() {
-    if (!this.data) return;
     let level = LEVELS[this.data.aqi.level];
-    this.status.text = level.text;
+    this.status.text = _(level.text);
+    this.title.text = _("air_quality");
     this.status.style.fill = level.color;
     this.arcFront.style.fill = level.color;
     this.arcBack.style.fill = level.color;
     this.cloudIcon.style.fill = level.color;
     this.aqi.text = this.data.aqi.val;
-    this.pol.text = POL_INT[this.data.aqi.pol] || "";
+    this.pol.text = _(this.data.aqi.pol);
     this.name.text = this.data.name;
     if (this.data.dist) {
       this.distance.text = formatDistance(this.data.dist);
