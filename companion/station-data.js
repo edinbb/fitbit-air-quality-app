@@ -24,7 +24,7 @@ export class StationData {
       o.id = data.idx;
       o.name = data.city.name.split(",")[0].trim();
       o.iaqis = this.cleanIAQIs(data.iaqi);
-      o.time = data.time.s;
+      o.time = data.time.s || "--";
       if (isNaN(data.aqi)) {
         if (data.iaqi.pm25) {
           o.aqi = this.formatAQI(data.iaqi.pm25.v, "pm25");
@@ -72,7 +72,6 @@ export class StationData {
   }
 
   formatAQI(v, p) {
-    if (!v) return { val: -1, pol: p, level: -1 };
     const inRange = (v, min, max) => v >= min && v <= max;
     if (inRange(v, 0, 50)) return { val: v, pol: p, level: 0 };
     if (inRange(v, 51, 100)) return { val: v, pol: p, level: 1 };

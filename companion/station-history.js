@@ -34,14 +34,16 @@ function createRecord(station) {
   };
   let arr = [];
   station.iaqis.forEach(iaqi => {
-    arr.push({
-      pol: iaqi.pol,
-      iaqiHist: [{
-        v: Math.ceil(iaqi.val),
-        l: iaqi.level,
-        d: new Date().getDate()
-      }]
-    });
+    if (iaqi.pol !== "none") {
+      arr.push({
+        pol: iaqi.pol,
+        iaqiHist: [{
+          v: Math.ceil(iaqi.val),
+          l: iaqi.level,
+          d: new Date().getDate()
+        }]
+      });
+    }
   });
   record.iaqis = arr;
   return records.push(record) - 1;
@@ -59,7 +61,7 @@ function updateIAQIs(index, iaqis, sameDay) {
       k++
     }
     if (recordIaqi) {
-      if (sameDay) { //just update max values for the same day
+      if (sameDay) { //update max values for the same day
         let lastDay = recordIaqi.iaqiHist[recordIaqi.iaqiHist.length - 1];
         let newValue = Math.ceil(iaqi.val);
         if (newValue > lastDay.v) {
@@ -77,14 +79,16 @@ function updateIAQIs(index, iaqis, sameDay) {
         recordIaqi.iaqiHist.shift(); //keep only HISTORY_NOD number of days
     } else {
       if (!record.iaqis) record.iaqis = [];
-      record.iaqis.push({
-        pol: iaqi.pol,
-        iaqiHist: [{
-          v: Math.ceil(iaqi.val),
-          l: iaqi.level,
-          d: new Date().getDate()
-        }]
-      });
+      if (iaqi.pol !== "none") {
+        record.iaqis.push({
+          pol: iaqi.pol,
+          iaqiHist: [{
+            v: Math.ceil(iaqi.val),
+            l: iaqi.level,
+            d: new Date().getDate()
+          }]
+        });
+      }
     }
   }
 }
