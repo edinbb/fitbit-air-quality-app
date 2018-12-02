@@ -30,7 +30,7 @@ function settingsComponent(props) {
       "analytics_toggle": "Share Analytics",
       "hourly": "Hourly",
       "30mins": "Every 30 Minutes",
-      "disabled": "Disabled",
+      "disabled": "Disabled"
     }
   };
 
