@@ -2,9 +2,10 @@ function settingsComponent(props) {
   let imageWidth = props.settingsStorage.getItem("imageWidth") || "348";
   let imageHeight = props.settingsStorage.getItem("imageHeight") || "250";
   let clientId = props.settingsStorage.getItem("clientId") || "0";
+  let token = props.settingsStorage.getItem("token") || "0";
 
   function search(value) {
-    let url = `https://api.waqi.info/search/?token=94478a597e41f1a4389d3114a9c2e63b4301c9d6&keyword=${value}`;
+    let url = `https://api.waqi.info/search/?token=${JSON.parse(token)}&keyword=${value}`;
     return fetch(url)
       .then((resp) => {
         if (resp.ok) return resp.json();

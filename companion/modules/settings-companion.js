@@ -24,7 +24,7 @@ export function set(key, value) {
 function restoreSettings() {
   for (let index = 0; index < settingsStorage.length; index++) {
     let key = settingsStorage.key(index);
-    if (!key) continue;    
+    if (!key || key === "token") continue;    
     let data = { key: key };
     if (key === "backgroundImage") {
       data.newValue = "set";
@@ -36,7 +36,7 @@ function restoreSettings() {
 }
 
 function updateSettings(evt) {
-  onSettingsCallback();
+  if (evt.key === "token") return; 
   let data = { key: evt.key };
   if (evt.key === "backgroundImage" && evt.newValue) {
     sendImage(evt.newValue);
@@ -47,6 +47,7 @@ function updateSettings(evt) {
     data.newValue = JSON.parse(evt.newValue);
   }
   sendValue(data);
+  onSettingsCallback();
 };
 
 function sendImage(data) {
