@@ -15,8 +15,8 @@ if (!appSettings.get("imageWidth")) appSettings.set("imageWidth", device.screen.
 if (!appSettings.get("imageHeight")) appSettings.set("imageHeight", device.screen.height);
 if (!appSettings.get("wakeInterval")) appSettings.set("wakeInterval", config.wakeInterval);
 if (appSettings.get("trackHistory") === null) appSettings.set("trackHistory", true);
-if (!appSettings.get("userLocale")) appSettings.set("userLocale", locale.language);
 if (!appSettings.get("token")) appSettings.set("token", config.token);
+appSettings.set("userLocale", locale.language);
 
 appAnalytics.initialize(`${device.screen.width}x${device.screen.height}`);
 

@@ -11,7 +11,7 @@ export function init(defaultLocale) {
   localized_strings = {};
 
   try {
-    localized_strings = fs.readFileSync(`${DIR_PATH}${userLocale}.json`, "json");
+    localized_strings = fs.readFileSync(`${DIR_PATH}${userLocale.slice(0, 2)}.json`, "json");
   } catch (e) {
     console.warn("Fallback to default locale!");
     localized_strings = fs.readFileSync(`${DIR_PATH}${defLocale}.json`, "json");

@@ -14,7 +14,7 @@ let background = document.getElementById("background").firstChild;
 let manager = new PanoramaManager(document.getElementById("panorama"));
 manager.ondata = (name) => appAnalytics.trackEvent("data", "view", name, 0);
 
-i18n.init("en-US");
+i18n.init("en");
 
 appAnalytics.initialize((data) => {
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN)

@@ -6,7 +6,7 @@ function settingsComponent(props) {
   let userLocale = props.settingsStorage.getItem("userLocale");
 
   const LOCALIZED_STRINGS = {
-    "en-US": {
+    "en": {
       "nearby_station_desc": "Show air quality data from the nearby monitoring station. Please note that stations are not active all the time.The next nearby station will be dynamically selected if previously selected station is not active.",
       "nearby_station_toggle": "Nearby Station",
       "stations_desc": "Enter city name to see available air quality monitoring stations for the area. Data Source:",
@@ -34,9 +34,9 @@ function settingsComponent(props) {
     }
   };
 
-  function _(key) {    
-    let strings = LOCALIZED_STRINGS[userLocale]
-      || LOCALIZED_STRINGS["en-US"];
+  function _(key) {
+    let strings = LOCALIZED_STRINGS[userLocale.split(0, 2)]
+      || LOCALIZED_STRINGS["en"];
     let str = strings[key] || key;
     var args = [].slice.call(arguments, 1);
     args.forEach((arg, i) => str = str.replace(`{${i}}`, arg));
