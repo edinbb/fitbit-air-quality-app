@@ -108,7 +108,11 @@ function checkIfSameDay(timestamp) {
 }
 
 function loadRecords() {
-  return JSON.parse(localStorage.getItem(HISTORY_KEY));
+  try {
+    return JSON.parse(localStorage.getItem(HISTORY_KEY));
+  } catch (e) {
+    localStorage.removeItem(HISTORY_KEY); //try to resolve parsing error
+  }
 }
 
 function storeRecords() {
