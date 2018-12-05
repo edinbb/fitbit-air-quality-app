@@ -3,7 +3,7 @@ function settingsComponent(props) {
   let imageHeight = props.settingsStorage.getItem("imageHeight") || "250";
   let clientId = props.settingsStorage.getItem("clientId") || "0";
   let token = props.settingsStorage.getItem("token") || "0";
-  let userLocale = props.settingsStorage.getItem("userLocale");
+  let userLocale = props.settingsStorage.getItem("userLocale") || "en";
 
   const LOCALIZED_STRINGS = {
     "en": {
@@ -35,12 +35,8 @@ function settingsComponent(props) {
   };
 
   function _(key) {
-    let strings = LOCALIZED_STRINGS[userLocale.split(0, 2)]
-      || LOCALIZED_STRINGS["en"];
-    let str = strings[key] || key;
-    var args = [].slice.call(arguments, 1);
-    args.forEach((arg, i) => str = str.replace(`{${i}}`, arg));
-    return str;
+    let strings = LOCALIZED_STRINGS[userLocale.split(0, 2)] || LOCALIZED_STRINGS["en"];
+    return strings[key] || key;
   }
 
   function search(value) {
