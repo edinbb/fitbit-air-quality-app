@@ -61,6 +61,10 @@ fitbit$ install
 
 For more info visit [Get started](https://dev.fitbit.com/getting-started/) with the Fitbit Software Development Kit (SDK)
 
-### License
+## Localization
+
+Help translate Air Quality into your language: [POEditor Project](https://poeditor.com/join/project/OcBNqlpxR4)
+
+## License
 
 Licensed under the [MIT License](./LICENSE).
