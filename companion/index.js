@@ -14,7 +14,7 @@ if (!device.screen) device.screen = { width: 348, height: 250 };
 if (!appSettings.get("imageWidth")) appSettings.set("imageWidth", device.screen.width);
 if (!appSettings.get("imageHeight")) appSettings.set("imageHeight", device.screen.height);
 if (!appSettings.get("wakeInterval")) appSettings.set("wakeInterval", config.wakeInterval);
-if (appSettings.get("trackHistory") === null) appSettings.set("trackHistory", true);
+if (appSettings.get("trackHistory") === null) appSettings.set("trackHistory", config.enableTracking);
 if (!appSettings.get("token")) appSettings.set("token", config.token);
 appSettings.set("userLocale", locale.language);
 

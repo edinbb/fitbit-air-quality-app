@@ -30,9 +30,10 @@ Add file resources/appconfig.json with following content:
 {
   "app": {
     "name": "AirQuality",
-    "version": "3.7.6"
+    "version": "3.8.6"
   },
-  "trackingId": "Your Google Analytics tracking ID",
+  "trackingId": "Your-Analytics-Tracking-ID",
+  "enableTracking": false,
   "token": "Your AQICN token",
   "wakeInterval": {
     "values": [
