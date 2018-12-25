@@ -1,5 +1,5 @@
 import { localStorage } from "local-storage";
-import { HISTORY_KEY, HISTORY_NOD } from "../common/const";
+import { HISTORY_KEY, HISTORY_NOD, DAYS } from "../common/const";
 
 let records;
 
@@ -40,7 +40,7 @@ function createRecord(station) {
         iaqiHist: [{
           v: Math.ceil(iaqi.val),
           l: iaqi.level,
-          d: new Date().getDate()
+          d: DAYS[new Date().getDay()]
         }]
       });
     }
@@ -72,7 +72,7 @@ function updateIAQIs(index, iaqis, sameDay) {
         recordIaqi.iaqiHist.push({
           v: Math.ceil(iaqi.val),
           l: iaqi.level,
-          d: new Date().getDate()
+          d: DAYS[new Date().getDay()]
         });
       }
       if (recordIaqi.iaqiHist.length > HISTORY_NOD)
@@ -85,7 +85,7 @@ function updateIAQIs(index, iaqis, sameDay) {
           iaqiHist: [{
             v: Math.ceil(iaqi.val),
             l: iaqi.level,
-            d: new Date().getDate()
+            d: DAYS[new Date().getDay()]
           }]
         });
       }

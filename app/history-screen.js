@@ -1,5 +1,5 @@
 import { barAttr } from "./utils";
-import { _ } from "./modules/i18n"
+import { _ } from "./modules/i18n";
 import { LEVELS } from "../common/const";
 
 export class HistoryScreen {
@@ -52,29 +52,26 @@ export class HistoryScreen {
         }
         if (info.type === "history-iaqi-pool") {
           let polEl = tile.getElementById("history-iaqi-pol");
-          let barsEl = tile.getElementsByClassName("history-iaqi-chart-bar");
+          let barsEl = tile.getElementsByClassName("chart-bar");
           polEl.text = _(info.iaqi.pol);
           barsEl.forEach((el, i) => {
             el.style.display = "none";
             let histData = info.iaqi.iaqiHist[i];
             if (histData) {
-              let barValue = el.getElementById("bar-value");
-              let barRectFront = el.getElementById("bar-front");
-              let axisValue = el.getElementById("axis-value");
-              let color = LEVELS[histData.l].color;
-              let barRectAttr = barAttr(histData.v);
-              barValue.text = histData.v;
-              barValue.style.fill = color;
-              barRectFront.y = barRectAttr.y;
-              barRectFront.height = barRectAttr.height;
-              barRectFront.style.fill = color;
-              axisValue.text = histData.d;
               el.style.display = "inline";
+              let axisValue = el.firstChild;
+              let barFront = axisValue.nextSibling;
+              axisValue.text = _(histData.d);
+              let barRectAttr = barAttr(histData.v);
+              barFront.y = barRectAttr.y;
+              barFront.height = barRectAttr.height;
+              let color = LEVELS[histData.l].color;
+              barFront.style.fill = color;
             }
           });
         }
       }
-    }
+    };
     this.historyVL.length = listArr.length;
     for (let i = 0; i < this.historyVL.length; i++)
       this.historyVL.updateTile(i, { redraw: false });

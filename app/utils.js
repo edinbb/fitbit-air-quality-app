@@ -26,7 +26,7 @@ export function timestampConverter(timestamp) {
 }
 
 export function barAttr(val) {
-  let ret = { y: 30, height: 81 };
+  let ret = { y: 11, height: 100 };
   let c = val > 300 ? ret.height : Math.ceil(val * (ret.height / 300));
   ret.y = ret.y + ret.height - c;
   ret.height = c;

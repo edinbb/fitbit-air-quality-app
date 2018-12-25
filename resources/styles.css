@@ -185,55 +185,19 @@
 }
 
 .history-bar-chart {
-  x: 51;
+  x: 8;
   y: 36;
-  width: 100%-102;
+  width: 100%-16;
   height: 133;
 }
 
-.bar-chart-axis { 
-  x: 0; 
-  y: 100%-22; 
-  width: 100%; 
-  height: 2; 
-  fill: fb-extra-dark-gray;
-  opacity: 0.7;
-}
-
-.history-iaqi-chart-bar {
+.chart-bar {
   y: 0;
-  width: 46;
+  width: 44;
   height: 100%;
 }
 
-.history-iaqi-bar-value {
-  x: 50%;
-  y: 22;
-  font-size: 22; 
-  font-family: System-Regular;
-  text-length: 16;
-  text-anchor: middle;
-  fill: fb-light-gray;
-}
-
-.history-iaqi-bar-back {
-  x: 0;
-  y: 30;
-  width: 100%;
-  height: 83;
-  fill: fb-extra-dark-gray;
-  opacity: 0.7;
-}
-
-.history-iaqi-bar-front {
-  x: 0;
-  y: 30;
-  width: 100%;
-  height: 81;
-  fill: fb-dark-gray;
-}
-
-.history-iaqi-bar-day {
+.bar-axis-value {
   x: 50%;
   y: 100%;
   font-size: 22; 
@@ -241,4 +205,12 @@
   text-length: 16;
   text-anchor: middle;
   fill: fb-light-gray;
+}
+
+.bar-front {
+  x: 0;
+  y: 11;
+  width: 100%;
+  height: 100;
+  fill: fb-dark-gray;
 }

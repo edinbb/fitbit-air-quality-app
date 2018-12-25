@@ -78,22 +78,21 @@
       </use>
     </symbol>
 
-    <symbol id='history-iaqi-chart-bar' class='history-iaqi-chart-bar' display='none'>
-      <text id='bar-value' class='history-iaqi-bar-value' />
-      <rect class='history-iaqi-bar-back' />
-      <rect id='bar-front' class='history-iaqi-bar-front' />
-      <text id='axis-value' class='history-iaqi-bar-day' />
+    <symbol id='chart-bar' class='chart-bar' display='none'>
+      <text class='bar-axis-value' />
+      <rect class='bar-front' />
     </symbol>
     
     <symbol id='history-iaqi' href='#tile-list-item' class='history-iaqi-height' display='none'>
       <text id='history-iaqi-pol' class='medium history-iaqi-pol' />
       <svg id='history-bar-chart' class='history-bar-chart'>
-        <rect class='bar-chart-axis' />
-        <use href='#history-iaqi-chart-bar' x='0' />
-        <use href='#history-iaqi-chart-bar' x='$+4' />
-        <use href='#history-iaqi-chart-bar' x='$+4' />
-        <use href='#history-iaqi-chart-bar' x='$+4' />
-        <use href='#history-iaqi-chart-bar' x='$+4' />
+        <use href='#chart-bar' x='0' />
+        <use href='#chart-bar' x='$+4' />
+        <use href='#chart-bar' x='$+4' />
+        <use href='#chart-bar' x='$+4' />
+        <use href='#chart-bar' x='$+4' />
+        <use href='#chart-bar' x='$+4' />
+        <use href='#chart-bar' x='$+4' />
       </svg>
       <rect id='tile-divider-bottom' class='divider-bottom' />
     </symbol>

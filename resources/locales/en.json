@@ -29,5 +29,12 @@
   "sampled_time": "Sampled on {0}",
   "back": "Back",
   "close": "Close",
-  "history": "History"
+  "history": "History",
+  "SU": "S",
+  "MO": "M",
+  "TU": "T",
+  "WE": "W",
+  "TH": "T",
+  "FR": "F",
+  "SA": "S"
 }

@@ -4,7 +4,7 @@ export const FILENAME_TYPE = "cbor";
 export const FILENAME_JPG = "background.jpg";
 export const PATH_TO_IMAGE = "/private/data/background.jpg";
 export const HISTORY_KEY = "history01";
-export const HISTORY_NOD = 5;
+export const HISTORY_NOD = 7;
 
 export const LEVELS = {
     "0": { text: "good", color: "#67E55D" },
@@ -15,3 +15,5 @@ export const LEVELS = {
     "5": { text: "hazardous", color: "#800000" },
     "-1": { text: "unknown", color: "fb-light-gray" }
 };
+
+export const DAYS = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
