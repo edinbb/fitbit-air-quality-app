@@ -1,6 +1,6 @@
 {
   "name": "fitbit-air-quality-app",
-  "version": "3.8.10",
+  "version": "3.8.11",
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
@@ -27,5 +27,8 @@
   "scripts": {
     "build": "fitbit-build",
     "debug": "fitbit"
+  },
+  "dependencies": {
+    "io-ts": "^1.4.1"
   }
 }
