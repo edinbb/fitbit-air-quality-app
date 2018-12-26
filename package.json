@@ -8,7 +8,7 @@
     "@fitbit/sdk-cli": "^1.5.0"
   },
   "fitbit": {
-    "appUUID": "f9c48f8e-0a30-49f5-a330-7281e6f21b17",
+    "appUUID": "b66657c1-f6d2-4397-af8c-50992340e8b4",
     "appType": "app",
     "appDisplayName": "Air Quality",
     "iconFile": "resources/icon.png",
