@@ -14,17 +14,21 @@ export function initialize(callback) {
 }
 
 export function get(key) {
-  return JSON.parse(settingsStorage.getItem(key));
+  try {
+    return JSON.parse(settingsStorage.getItem(key));
+  } catch (ex) { console.warn(ex); }
 }
 
 export function set(key, value) {
-  settingsStorage.setItem(key, JSON.stringify(value));
+  try {
+    settingsStorage.setItem(key, JSON.stringify(value));
+  } catch (ex) { console.warn(ex); }
 }
 
 function restoreSettings() {
   for (let index = 0; index < settingsStorage.length; index++) {
     let key = settingsStorage.key(index);
-    if (!key || key === "token") continue;    
+    if (!key || key === "token") continue;
     let data = { key: key };
     if (key === "backgroundImage") {
       data.newValue = "set";
@@ -36,7 +40,7 @@ function restoreSettings() {
 }
 
 function updateSettings(evt) {
-  if (evt.key === "token") return; 
+  if (evt.key === "token") return;
   let data = { key: evt.key };
   if (evt.key === "backgroundImage" && evt.newValue) {
     sendImage(evt.newValue);
