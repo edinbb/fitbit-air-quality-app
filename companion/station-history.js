@@ -38,7 +38,7 @@ function createRecord(station) {
       arr.push({
         pol: iaqi.pol,
         iaqiHist: [{
-          v: Math.ceil(iaqi.val),
+          v: Math.floor(iaqi.val),
           l: iaqi.level,
           d: DAYS[new Date().getDay()]
         }]
@@ -70,7 +70,7 @@ function updateIAQIs(index, iaqis, sameDay) {
         }
       } else {
         recordIaqi.iaqiHist.push({
-          v: Math.ceil(iaqi.val),
+          v: Math.floor(iaqi.val),
           l: iaqi.level,
           d: DAYS[new Date().getDay()]
         });
@@ -83,7 +83,7 @@ function updateIAQIs(index, iaqis, sameDay) {
         record.iaqis.push({
           pol: iaqi.pol,
           iaqiHist: [{
-            v: Math.ceil(iaqi.val),
+            v: Math.floor(iaqi.val),
             l: iaqi.level,
             d: DAYS[new Date().getDay()]
           }]

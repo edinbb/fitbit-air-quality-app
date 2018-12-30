@@ -72,13 +72,14 @@ export class StationData {
   }
 
   formatAQI(v, p) {
-    const inRange = (v, min, max) => v >= min && v <= max;
-    if (inRange(v, 0, 50)) return { val: v, pol: p, level: 0 };
-    if (inRange(v, 51, 100)) return { val: v, pol: p, level: 1 };
-    if (inRange(v, 101, 150)) return { val: v, pol: p, level: 2 };
-    if (inRange(v, 151, 200)) return { val: v, pol: p, level: 3 };
-    if (inRange(v, 201, 300)) return { val: v, pol: p, level: 4 };
-    if (v > 300) return { val: v, pol: p, level: 5 };
+    let c = Math.floor(v);
+    const inRange = (c, min, max) => c >= min && c <= max;
+    if (inRange(c, 0, 50)) return { val: v, pol: p, level: 0 };
+    if (inRange(c, 51, 100)) return { val: v, pol: p, level: 1 };
+    if (inRange(c, 101, 150)) return { val: v, pol: p, level: 2 };
+    if (inRange(c, 151, 200)) return { val: v, pol: p, level: 3 };
+    if (inRange(c, 201, 300)) return { val: v, pol: p, level: 4 };
+    if (c > 300) return { val: v, pol: p, level: 5 };
     return { val: -1, pol: "none", level: -1 };
   }
 }
