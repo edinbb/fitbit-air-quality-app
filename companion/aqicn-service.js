@@ -5,12 +5,12 @@ import { getLocation } from "./modules/location-helper";
 import { SettingsError } from "./errors";
 import * as stationHistory from "./station-history"
 import { get } from "./modules/settings-companion";
-import config from "../resources/appconfig.json";
+import { CONFIG } from "./appconfig";
 import { HISTORY_KEY } from "../common/const";
 
 export class AqicnService {
   constructor() {
-    this.api = new AqicnAPI(config.token);
+    this.api = new AqicnAPI(CONFIG.token);
     this.onresolve = undefined;
     this.onreject = undefined;
     settingsStorage.addEventListener("change", evt => {

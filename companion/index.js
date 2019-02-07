@@ -7,15 +7,15 @@ import { AqicnService } from "./aqicn-service";
 import { enqueueFile } from "./modules/filetransfer-companion";
 import * as appSettings from "./modules/settings-companion";
 import * as appAnalytics from "./modules/ga-companion";
-import config from "../resources/appconfig.json";
+import { CONFIG } from "./appconfig";
 import { FILENAME_DATA } from "../common/const";
 
 if (!device.screen) device.screen = { width: 348, height: 250 };
 if (!appSettings.get("imageWidth")) appSettings.set("imageWidth", device.screen.width);
 if (!appSettings.get("imageHeight")) appSettings.set("imageHeight", device.screen.height);
-if (!appSettings.get("wakeInterval")) appSettings.set("wakeInterval", config.wakeInterval);
-if (appSettings.get("trackHistory") === null) appSettings.set("trackHistory", config.enableTracking);
-if (!appSettings.get("token")) appSettings.set("token", config.token);
+if (!appSettings.get("wakeInterval")) appSettings.set("wakeInterval", CONFIG.wakeInterval);
+if (appSettings.get("trackHistory") === null) appSettings.set("trackHistory", CONFIG.enableTracking);
+if (!appSettings.get("token")) appSettings.set("token", CONFIG.token);
 appSettings.set("userLocale", locale.language);
 
 appAnalytics.initialize(`${device.screen.width}x${device.screen.height}`);

@@ -1,4 +1,4 @@
 /build
 /node_modules
 /.vscode
-/resources/appconfig.json
+/companion/appconfig.js

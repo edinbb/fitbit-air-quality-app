@@ -1,10 +1,10 @@
 {
   "name": "fitbit-air-quality-app",
-  "version": "3.8.14",
+  "version": "4.0.0",
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
-    "@fitbit/sdk": "^1.0.5",
+    "@fitbit/sdk": "^3.0.0",
     "@fitbit/sdk-cli": "^1.5.0"
   },
   "fitbit": {

@@ -1,13 +1,13 @@
 import * as messaging from "messaging";
 import { settingsStorage } from "settings";
 import { uuidv4 } from "../utils";
-import config from "../../resources/appconfig.json";
+import { CONFIG } from "../appconfig";
 
 const URL = "https://www.google-analytics.com/collect";
 let clientId, screenSize, isEnabled;
 
 export function initialize(scr) {
-  if (config.trackingId === "") throw ("Tracking ID is not set! Check appconfig.json!");
+  if (CONFIG.trackingId === "") throw ("Tracking ID is not set! Check appconfig.json!");
   screenSize = scr;
   clientId = getKey("clientId", uuidv4());
   console.log(`Client ID: ${clientId}`);
@@ -46,12 +46,12 @@ export function trackTiming(category, variable, time) {
 function gaRequest(type, params) {
   if (!isEnabled) return;
   let payload = "v=1"
-    + "&tid=" + config.trackingId
+    + "&tid=" + CONFIG.trackingId
     + "&cid=" + clientId
     + "&sr=" + screenSize
     + "&t=" + type
-    + "&an=" + config.app.name
-    + "&av=" + config.app.version;
+    + "&an=" + CONFIG.app.name
+    + "&av=" + CONFIG.app.version;
 
   for (const key in params) {
     if (params.hasOwnProperty(key)) {
