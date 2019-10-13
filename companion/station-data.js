@@ -24,7 +24,7 @@ export class StationData {
       o.id = data.idx;
       o.name = data.city.name.split(",")[0].trim();
       o.iaqis = this.cleanIAQIs(data.iaqi);
-      o.time = data.time.s || "--";
+      o.time = this.formatTime(data.time.s);
       if (isNaN(data.aqi)) {
         if (data.iaqi.pm25) {
           o.aqi = this.formatAQI(data.iaqi.pm25.v, "pm25");
@@ -81,5 +81,15 @@ export class StationData {
     if (inRange(c, 201, 300)) return { val: v, pol: p, level: 4 };
     if (c > 300) return { val: v, pol: p, level: 5 };
     return { val: -1, pol: "none", level: -1 };
+  }
+
+  formatTime(time) {
+    let ret = "--";
+    try {
+      ret = time ? time.slice(0,-3) : ret;
+    } catch (e) {
+      console.warn(e);
+    }
+    return ret;
   }
 }

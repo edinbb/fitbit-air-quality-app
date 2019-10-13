@@ -1,7 +1,6 @@
 import { DetailsScreen } from "./details-screen"
 import { HistoryScreen } from "./history-screen"
-import { ease, formatDistance } from "./utils";
-import { _ } from "./modules/i18n"
+import { ease, formatDistance, getLocText } from "./utils";
 import { LEVELS } from "../common/const";
 
 export class PanoramaItem {
@@ -34,14 +33,14 @@ export class PanoramaItem {
 
   load() {
     let level = LEVELS[this.data.aqi.level];
-    this.status.text = _(level.text);
-    this.title.text = _("air_quality");
+    this.status.text = getLocText(level.text);
+    this.title.text = getLocText("air_quality");
     this.status.style.fill = level.color;
     this.arcFront.style.fill = level.color;
     this.arcBack.style.fill = level.color;
     this.cloudIcon.style.fill = level.color;
     this.aqi.text = this.data.aqi.val;
-    this.pol.text = _(this.data.aqi.pol);
+    this.pol.text = getLocText(this.data.aqi.pol);
     this.name.text = this.data.name;
     if (this.data.dist) {
       this.distance.text = formatDistance(this.data.dist);

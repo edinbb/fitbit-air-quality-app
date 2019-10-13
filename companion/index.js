@@ -2,7 +2,6 @@ import { me } from "companion"
 import { device } from "peer";
 import * as messaging from "messaging";
 import * as cbor from 'cbor';
-import { locale } from "user-settings";
 import { AqicnService } from "./aqicn-service";
 import { enqueueFile } from "./modules/filetransfer-companion";
 import * as appSettings from "./modules/settings-companion";
@@ -16,7 +15,6 @@ if (!appSettings.get("imageHeight")) appSettings.set("imageHeight", device.scree
 if (!appSettings.get("wakeInterval")) appSettings.set("wakeInterval", CONFIG.wakeInterval);
 if (appSettings.get("trackHistory") === null) appSettings.set("trackHistory", CONFIG.enableTracking);
 if (!appSettings.get("token")) appSettings.set("token", CONFIG.token);
-appSettings.set("userLocale", locale.language);
 
 appAnalytics.initialize(`${device.screen.width}x${device.screen.height}`);
 

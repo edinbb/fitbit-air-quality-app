@@ -151,14 +151,14 @@
   x: 50%-155;
   y: 50%-57;
   width: 310;
-  height: 114;
+  height: 124;
   font-size: 22; 
   font-family: System-Regular;
-  text-length: 96;
+  text-length: 256;
   text-anchor: middle;
   text-overflow: clip;
   display-align: center; 
-  rows: 3; 
+  rows: 5; 
   fill: fb-light-gray;
 }
 

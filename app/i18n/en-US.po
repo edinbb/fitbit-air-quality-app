@@ -1,0 +1,194 @@
+msgid "fetch_error"
+msgstr "Unable to get data from the data provider. Check your Internet connection or try restarting the app."
+
+msgid "data_error"
+msgstr "The data is temporarily unavailable. Please try again later."
+
+msgid "content_error"
+msgstr "The station data is corrupted and unreadable. Please try again later or select a different station."
+
+msgid "settings_error"
+msgstr "Nothing to show. Go to App Settings in the App Gallery and select monitoring stations."
+
+msgid "location_error"
+msgstr "Unable to acquire your current location. Enable Location services and restart the app."
+
+msgid "socket_error"
+msgstr "Connection error. Get close to your phone and switch the Bluetooth on."
+
+msgid "generic_error"
+msgstr "Sorry, something went wrong. Try restarting the app."
+
+msgid "empty_message"
+msgstr "Nothing to show. Go to App Settings and set Track historical data to ON."
+
+msgid "air_quality"
+msgstr "Air Quality"
+ 
+msgid "hist_data"
+msgstr "Historical Data"
+
+msgid "monitoring_station"
+msgstr "Monitoring Station"
+ 
+msgid "good"
+msgstr "Good"
+
+msgid "moderate"
+msgstr "Moderate"
+ 
+msgid "sensitive_beware"
+msgstr "Sensitive beware"
+
+msgid "unhealthy"
+msgstr "Unhealthy"
+
+msgid "very_unhealthy"
+msgstr "Very unhealthy"
+
+msgid "hazardous"
+msgstr "Hazardous"
+
+msgid "unknown"
+msgstr "Unknown"
+
+msgid "pm25"
+msgstr "PM2.5"
+
+msgid "pm10"
+msgstr  "PM10"
+
+msgid "co"
+msgstr "CO"
+
+msgid "no2"
+msgstr "NO2"
+
+msgid "so2"
+msgstr "SO2"
+
+msgid "o3"
+msgstr "O3"
+
+msgid "none"
+msgstr "UNKN"
+
+msgid "back"
+msgstr "Back"
+
+msgid "close"
+msgstr "Close"
+
+msgid "history"
+msgstr "History"
+
+msgid "SU"
+msgstr "S"
+
+msgid "MO"
+msgstr "M"
+
+msgid "TU"
+msgstr "T"
+
+msgid "WE"
+msgstr "W"
+
+msgid "TH"
+msgstr "T"
+
+msgid "FR"
+msgstr "F"
+
+msgid "SA"
+msgstr "S"
+
+msgid "too_far"
+msgstr "...too far"
+
+msgid "hour"
+msgstr "h"
+
+msgid "minute"
+msgstr "m"
+
+msgid "updated"
+msgstr "Updated {0} ago"
+
+msgid "attribution"
+msgstr "Data Source: {0}"
+
+msgid "sampled_time"
+msgstr "Sampled on {0}"
+
+msgid "nearby_station_desc"
+msgstr "Show air quality data from the nearby monitoring station. Please note that stations are not active all the time.The next nearby station will be dynamically selected if previously selected station is not active."
+
+msgid "nearby_station_toggle"
+msgstr "Nearby Station"
+
+msgid "stations_desc"
+msgstr "Enter city name to see available air quality monitoring stations for the area. Data Source:"
+
+msgid "stations_title"
+msgstr "Monitoring Stations"
+
+msgid "stations_additivelist_title"
+msgstr "Selected stations"
+
+msgid "stations_input_title"
+msgstr "Add monitoring station"
+
+msgid "stations_input_label"
+msgstr "Add station"
+
+msgid "stations_input_placeholder"
+msgstr "Enter city name"
+
+msgid "general_desc"
+msgstr "Setting tracking to OFF or disabling fetching will clear stored historical data."
+
+msgid "general_title"
+msgstr "General"
+
+msgid "general_wake_title"
+msgstr "Select fetch schedule"
+
+msgid "general_wake_label"
+msgstr "Fetch schedule"
+
+msgid "general_history_toggle"
+msgstr "Track historical data"
+
+msgid "background_desc"
+msgstr "You may need to restart the app for the changes to take effect."
+
+msgid "background_title"
+msgstr "App Background"
+
+msgid "background_picker_title"
+msgstr "Image Picker"
+
+msgid "background_picker_label"
+msgstr "Upload an image"
+
+msgid "background_button"
+msgstr "Remove background image"
+
+msgid "analytics_desc"
+msgstr "Help me improve app by sending anonymous usage data. The following data will be tracked: usage statistics, crash and exception data. Your ID: "
+
+msgid "analytics_title"
+msgstr "Analytics"
+
+msgid "analytics_toggle"
+msgstr "Share Analytics"
+
+msgid "hourly"
+msgstr "Hourly"
+
+msgid "30mins"
+msgstr "Every 30 Minutes"
+
+msgid "disabled"
+msgstr "Disabled"

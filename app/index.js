@@ -1,20 +1,18 @@
 import * as fs from "fs";
 import document from "document";
 import * as messaging from "messaging";
-import * as i18n from "./modules/i18n"
 import * as fileTransfer from "./modules/filetransfer-device";
 import * as appSettings from "./modules/settings-device";
 import * as appAnalytics from "./modules/ga-device";
 import { PanoramaManager } from "./panorama-manager";
 import { FILENAME_DATA, FILENAME_TYPE, PATH_TO_IMAGE } from "../common/const";
+import { getLocText } from "./utils"
 //import * as appMemory from "./modules/memory";
 //appMemory.init();
 
 let background = document.getElementById("background").firstChild;
 let manager = new PanoramaManager(document.getElementById("panorama"));
 manager.ondata = (name) => appAnalytics.trackEvent("data", "view", name, 0);
-
-i18n.init("en");
 
 appAnalytics.initialize((data) => {
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN)
@@ -84,7 +82,7 @@ function showContent(content) {
 
 function showError(err) {
   let errScr = document.getElementById("error");
-  errScr.getElementById("copy").text = i18n._(`${err.errType}_error`);
+  errScr.getElementById("copy").text = getLocText(`${err.errType}_error`);
   errScr.animate("enable");
   appAnalytics.trackScreen("error");
 }

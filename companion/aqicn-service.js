@@ -25,7 +25,7 @@ export class AqicnService {
   getData(checkOverdue) {
     let metadata = this.createMetadata();
     if (checkOverdue) {
-      if (this.isOverdue(metadata))
+      if (this.isDue(metadata))
         this.refreshData(metadata);
     } else {
       this.refreshData(metadata);
@@ -104,7 +104,7 @@ export class AqicnService {
     }
   }
 
-  isOverdue(metadata) {
+  isDue(metadata) {
     try {
       let timestamp = JSON.parse(localStorage.getItem("timestamp"));
       if (!timestamp || Date.now() - timestamp > metadata.wakeInterval) return true;

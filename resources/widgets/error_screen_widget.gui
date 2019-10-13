@@ -3,7 +3,7 @@
     <symbol  id='error-screen' display='none' opacity='0'>
       <rect x='0' y='0' width='100%' height='100%' fill='fb-black' />
       <use href='#mixed-text-center-mid' height='100%' fill='fb-blue'>
-        <set href='#header/text' attributeName='text-buffer' to='Air Quality'/>
+        <set href='#header/text' attributeName='text-buffer' to='_air_quality'/>
         <set href='#copy/text' attributeName='text-length' to='128' />
       </use>
       <animate attributeName='display' to='inline' dur='0' begin='enable' />

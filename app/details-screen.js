@@ -1,6 +1,5 @@
 import { LEVELS } from "../common/const";
-import { _ } from "./modules/i18n"
-import { timestampConverter } from "./utils";
+import { timestampConverter, getLocText } from "./utils";
 
 export class DetailsScreen {
   constructor(el) {
@@ -26,20 +25,20 @@ export class DetailsScreen {
 
   load(data, timestamp) {
     this.detailsName.text = data.name;
-    this.detailsTitle.text = _("monitoring_station");
+    this.detailsTitle.text = getLocText("monitoring_station");
     data.iaqis.forEach((iaqi, i) => {
       let el = this.detailsIAQIs[i];
       let polEl = el.firstChild;
       let valEl = polEl.nextSibling;
-      polEl.text = _(iaqi.pol);
+      polEl.text = getLocText(iaqi.pol);
       valEl.text = iaqi.val;
       valEl.style.fill = LEVELS[iaqi.level].color;
     });
-    this.detailsRefreshTime.text = _("updated", timestampConverter(timestamp));
-    this.detailsAttribution.text = _("attribution", data.url);
-    this.detailsSampledTime.text = _("sampled_time", data.time);
-    this.btnHistory.getElementById("text").text = _("history");
-    this.btnClose.getElementById("text").text = _("close");
+    this.detailsRefreshTime.text = getLocText("updated", timestampConverter(timestamp));
+    this.detailsAttribution.text = getLocText("attribution", data.url);
+    this.detailsSampledTime.text = getLocText("sampled_time", data.time);
+    this.btnHistory.getElementById("text").text = getLocText("history");
+    this.btnClose.getElementById("text").text = getLocText("close");
   }
 
   show() {

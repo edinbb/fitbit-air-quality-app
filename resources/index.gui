@@ -73,6 +73,7 @@
 
     <symbol id='history-button' href='#tile-list-item' height='80' display='none'>
       <use id='button' href='#square-button' class='dialog-single-btn' y='100%-78' fill='fb-white'>
+        <set href='#text' attributeName='text-length' to='32' />
         <set href='#text' attributeName='text-buffer' to='Back' />
         <set href='#text' attributeName='text-anchor' to='middle' />
       </use>

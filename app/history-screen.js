@@ -1,5 +1,4 @@
-import { barAttr } from "./utils";
-import { _ } from "./modules/i18n";
+import { barAttr, getLocText } from "./utils";
 import { LEVELS } from "../common/const";
 
 export class HistoryScreen {
@@ -13,14 +12,14 @@ export class HistoryScreen {
     let listArr = [{
       type: "history-header-pool",
       value: data.name,
-      title: _("hist_data")
+      title: getLocText("hist_data")
     }];
     if (!data.history
       || !data.history.iaqis
       || data.history.iaqis.length === 0) {
       listArr.push({
         type: "empty-message-pool",
-        value: _("empty_message")
+        value: getLocText("empty_message")
       });
     } else {
       data.history.iaqis.forEach(iaqi => {
@@ -47,13 +46,13 @@ export class HistoryScreen {
         }
         if (info.type === "history-button-pool") {
           let btnEl = tile.getElementById('button');
-          btnEl.getElementById("text").text = _("back");
+          btnEl.getElementById("text").text = getLocText("back");
           btnEl.onclick = (evt) => info.self.onback();
         }
         if (info.type === "history-iaqi-pool") {
           let polEl = tile.getElementById("history-iaqi-pol");
           let barsEl = tile.getElementsByClassName("chart-bar");
-          polEl.text = _(info.iaqi.pol);
+          polEl.text = getLocText(info.iaqi.pol);
           barsEl.forEach((el, i) => {
             el.style.display = "none";
             let histData = info.iaqi.iaqiHist[i];
@@ -61,7 +60,7 @@ export class HistoryScreen {
               el.style.display = "inline";
               let axisValue = el.firstChild;
               let barFront = axisValue.nextSibling;
-              axisValue.text = _(histData.d);
+              axisValue.text = getLocText(histData.d);
               let barRectAttr = barAttr(histData.v);
               barFront.y = barRectAttr.y;
               barFront.height = barRectAttr.height;

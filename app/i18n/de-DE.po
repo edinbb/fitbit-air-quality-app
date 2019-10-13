@@ -1,0 +1,194 @@
+msgid "fetch_error"
+msgstr "Abfrage der Daten nicht möglich. Bitte Internetverbindung prüfen und App neu starten."
+
+msgid "data_error"
+msgstr "Daten derzeit nicht verfügbar. Bitte später erneut versuchen."
+
+msgid "content_error"
+msgstr "Die Daten der Station sind beschädigt. Bitte später erneut versuchen oder eine andere Station wählen."
+
+msgid "settings_error"
+msgstr "Nichts anzuzeigen. Bitte in der App Gallerie in die App Einstellungen gehen und eine Überwachungsstation auswählen."
+
+msgid "location_error"
+msgstr "Derzeitiger Standort kann nicht erkannt werden. Bitte Standortdienste aktivieren und App neu starten."
+
+msgid "socket_error"
+msgstr "Verbindungsfehler. Bitte gehe näher an dein Smartphone und schalte Bluetooth ein."
+
+msgid "generic_error"
+msgstr "Etwas ist schief gelaufen. Bitte App neu starten."
+
+msgid "empty_message"
+msgstr "Nichts anzuzeigen. Bitte in die App-Einstellungen gehen und Verlaufsaufzeichnung einschalten."
+
+msgid "air_quality"
+msgstr "Luftqualität"
+ 
+msgid "hist_data"
+msgstr "Verlauf"
+
+msgid "monitoring_station"
+msgstr "Überwachungsstation"
+ 
+msgid "good"
+msgstr "Gut"
+
+msgid "moderate"
+msgstr "Moderat"
+ 
+msgid "sensitive_beware"
+msgstr "Schlecht, Ungenügend"
+
+msgid "unhealthy"
+msgstr "Ungesund"
+
+msgid "very_unhealthy"
+msgstr "Äußerst Ungesund"
+
+msgid "hazardous"
+msgstr "Gefährlich"
+
+msgid "unknown"
+msgstr "Unbekannt"
+
+msgid "pm25"
+msgstr "PM2.5"
+
+msgid "pm10"
+msgstr  "PM10"
+
+msgid "co"
+msgstr "CO"
+
+msgid "no2"
+msgstr "NO2"
+
+msgid "so2"
+msgstr "SO2"
+
+msgid "o3"
+msgstr "O3"
+
+msgid "none"
+msgstr "--"
+
+msgid "back"
+msgstr "Zurück"
+
+msgid "close"
+msgstr "Schließen"
+
+msgid "history"
+msgstr "Verlauf"
+
+msgid "SU"
+msgstr "S"
+
+msgid "MO"
+msgstr "M"
+
+msgid "TU"
+msgstr "D"
+
+msgid "WE"
+msgstr "M"
+
+msgid "TH"
+msgstr "D"
+
+msgid "FR"
+msgstr "F"
+
+msgid "SA"
+msgstr "S"
+
+msgid "too_far"
+msgstr "zu weit"
+
+msgid "hour"
+msgstr "s"
+
+msgid "minute"
+msgstr "m"
+
+msgid "updated"
+msgstr "Vor {0} aktualisiert"
+
+msgid "attribution"
+msgstr "Datenquelle: {0}"
+
+msgid "sampled_time"
+msgstr "Geprüft am {0}"
+
+msgid "nearby_station_desc"
+msgstr "Zeigt die Daten zur Luftqualitat der nächstgelegenen Station. Achtung, nicht alle Stationen sind immer aktiv. Die nächstgelegene Station wird dynamisch gewählt, sollte die bisherige gewählte Station nicht aktiv sein."
+
+msgid "nearby_station_toggle"
+msgstr "Nächstgelegene Station"
+
+msgid "stations_desc"
+msgstr "Bitte Namen einer Stadt eingeben, um verfügbare Überwachungsstationen anzuzeigen. Datenquelle:"
+
+msgid "stations_title"
+msgstr "Überwachungsstationen"
+
+msgid "stations_additivelist_title"
+msgstr "Ausgewählte Stationen"
+
+msgid "stations_input_title"
+msgstr "Füge Überwachungsstation hinzu"
+
+msgid "stations_input_label"
+msgstr "Füge Station hinzu"
+
+msgid "stations_input_placeholder"
+msgstr "Gebe Stadtnamen ein"
+
+msgid "general_desc"
+msgstr "Abschalten der Verlaufsaufzeichnung oder Aktualisierung löscht bisher gespeicherte Verlaufsdaten."
+
+msgid "general_title"
+msgstr "Allgemein"
+
+msgid "general_wake_title"
+msgstr "Wähle Aktualisierungsintervall"
+
+msgid "general_wake_label"
+msgstr "Aktualisierungsintervall"
+
+msgid "general_history_toggle"
+msgstr "Zeichne Verlauf auf"
+
+msgid "background_desc"
+msgstr "Die App muss womöglich neu gestartet werden, um alle Änderungen zu übernehmen."
+
+msgid "background_title"
+msgstr "App Hintergrund"
+
+msgid "background_picker_title"
+msgstr "Bild auswählen"
+
+msgid "background_picker_label"
+msgstr "Bild hochladen"
+
+msgid "background_button"
+msgstr "Entferne Hintergrundbild"
+
+msgid "analytics_desc"
+msgstr "Hilf mir die App zu verbessern, indem du mir Diagnosedaten sendest. Die folgenden Daten werden übertragen: Nutzungsstatistik, Abstürze und Fehlermeldungen. Deine ID:"
+
+msgid "analytics_title"
+msgstr "Diagnose"
+
+msgid "analytics_toggle"
+msgstr "Diagnosedaten teilen"
+
+msgid "hourly"
+msgstr "Stündlich"
+
+msgid "30mins"
+msgstr "alle 30 Minuten"
+
+msgid "disabled"
+msgstr "Abgeschaltet"
