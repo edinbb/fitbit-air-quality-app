@@ -16,51 +16,9 @@ Features:
 
 Get the app here https://gam.fitbit.com/gallery/app/b66657c1-f6d2-4397-af8c-50992340e8b4
 
-## Installation
+## Built With
 
-Get [AQICN](http://aqicn.org/data-platform/token/#/) token
-
-git clone https://github.com/Ed2Bs/fitbit-air-quality-app.git
-
-cd fitbit-air-quality-app
-
-Add file resources/appconfig.json with following content: 
-
-```
-{
-  "app": {
-    "name": "AirQuality",
-    "version": "3.8.6"
-  },
-  "trackingId": "Your-Analytics-Tracking-ID",
-  "enableTracking": false,
-  "token": "Your AQICN token",
-  "wakeInterval": {
-    "values": [
-      {
-        "name": "Hourly",
-        "value": 3600000
-      }
-    ],
-    "selected": [
-      0
-    ]
-  }
-}
-```
-
-npm install
-
-npx fitbit-build generate-appid
-
-npx fitbit-build
-
-npx fitbit
-
-fitbit$ install
-
-
-For more info visit [Get started](https://dev.fitbit.com/getting-started/) with the Fitbit Software Development Kit (SDK)
+Fitbit ([SDK](https://dev.fitbit.com/getting-started))
 
 ## Localization
 
