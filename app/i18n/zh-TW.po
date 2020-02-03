@@ -1,0 +1,173 @@
+msgid "fetch_error"
+msgstr "無法從資料來源取得資料。請檢查網路連線或重新開啟 App。"
+
+msgid "data_error"
+msgstr "資料暫時無法讀取，請稍候再試。"
+
+msgid "content_error"
+msgstr "該測站資訊已損毀或無法讀取，請稍候再試或選擇其他測站。"
+
+msgid "settings_error"
+msgstr "無資料可顯示。請到手機 App 中的應用程式打開本程式的設定頁面，選擇想要顯示的測站。"
+
+msgid "location_error"
+msgstr "無法取得你目前的位置，請啟用位置資訊後重新開啟 App。"
+
+msgid "socket_error"
+msgstr "連線錯誤，請將手錶靠近手機並開啟手機藍芽。"
+
+msgid "generic_error"
+msgstr "抱歉，程式出錯了。請試著重新開啟 App。"
+
+msgid "empty_message"
+msgstr "無資料可顯示。請到打開本程式的設定頁面，開啟歷史資料選項。"
+
+msgid "air_quality"
+msgstr "空氣品質"
+
+msgid "hist_data"
+msgstr "歷史資料"
+
+msgid "monitoring_station"
+msgstr "監測站"
+
+msgid "good"
+msgstr "良好"
+
+msgid "moderate"
+msgstr "普通"
+
+msgid "sensitive_beware"
+msgstr "對敏感族群不健康"
+
+msgid "unhealthy"
+msgstr "對所有族群不健康"
+
+msgid "very_unhealthy"
+msgstr "非常不健康"
+
+msgid "hazardous"
+msgstr "危害"
+
+msgid "unknown"
+msgstr "未知"
+
+msgid "pm25"
+msgstr "PM2.5"
+
+msgid "pm10"
+msgstr "PM10"
+
+msgid "co"
+msgstr "CO"
+
+msgid "no2"
+msgstr "NO2"
+
+msgid "so2"
+msgstr "SO2"
+
+msgid "o3"
+msgstr "O3"
+
+msgid "none"
+msgstr "UNKN"
+
+msgid "updated"
+msgstr "{0} 前更新"
+
+msgid "attribution"
+msgstr "資料來源: {0}"
+
+msgid "sampled_time"
+msgstr "採樣時間: {0}"
+
+msgid "back"
+msgstr "上一頁"
+
+msgid "close"
+msgstr "關閉"
+
+msgid "history"
+msgstr "歷史"
+
+msgid "nearby_station_desc"
+msgstr "顯示離你最近測站的空氣品質資訊。請注意監測站不一定隨時都在運作，如果最近的測站目前未運作，程式會自動顯示下一個測站的資訊。"
+
+msgid "nearby_station_toggle"
+msgstr "顯示最近監測站"
+
+msgid "stations_desc"
+msgstr "輸入城市名稱 (最好是英文) 以顯示該地區可用的測站。資料來源:"
+
+msgid "stations_title"
+msgstr "監測站"
+
+msgid "stations_additivelist_title"
+msgstr "選擇監測站"
+
+msgid "stations_input_title"
+msgstr "新增監測站"
+
+msgid "stations_input_label"
+msgstr "新增測站"
+
+msgid "stations_input_placeholder"
+msgstr "輸入城市名稱"
+
+msgid "general_desc"
+msgstr "關閉追蹤歷史資料或停用資料擷取會清空已儲存的歷史資料。"
+
+msgid "general_title"
+msgstr "一般"
+
+msgid "general_wake_title"
+msgstr "設定資料擷取間隔"
+
+msgid "general_wake_label"
+msgstr "資料擷取間隔"
+
+msgid "general_history_toggle"
+msgstr "追蹤歷史資料"
+
+msgid "background_desc"
+msgstr "重新開啟 App 變更才會生效。"
+
+msgid "background_title"
+msgstr "App 背景圖片"
+
+msgid "background_picker_title"
+msgstr "選擇圖片"
+
+msgid "background_picker_label"
+msgstr "上傳圖片"
+
+msgid "background_button"
+msgstr "移除背景圖片"
+
+msgid "analytics_desc"
+msgstr "傳送匿名使用資料能協助我們改善 App。只有下列資訊會被傳送: 用量統計資訊、當機及例外錯誤資訊。你的 ID: "
+
+msgid "analytics_title"
+msgstr "分析"
+
+msgid "analytics_toggle"
+msgstr "共享分析資料"
+
+msgid "hourly"
+msgstr "每小時"
+
+msgid "30mins"
+msgstr "每 30 分鐘"
+
+msgid "disabled"
+msgstr "停用"
+
+msgid "too_far"
+msgstr "太遠"
+
+msgid "minute"
+msgstr "分"
+
+msgid "hour"
+msgstr "時"
